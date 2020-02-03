@@ -1,0 +1,19 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header{
+  text-align: center;
+  align-content: center;
+  height: 10vh;
+  width: 100%;
+}
+
+.stats{
+  width: 20%;
+}
+
+.gameBoard{
+  width: 80%;
+}
