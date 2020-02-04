@@ -4,6 +4,7 @@
   "description": "A memory match game for kids",
   "main": "index.js",
   "scripts": {
+    "watch": "webpack --watch",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
