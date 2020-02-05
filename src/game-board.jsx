@@ -14,10 +14,14 @@ class GameBoard extends React.Component {
     this.setState({ cards: ["red", "orange", "yellow", "green", "blue", "indigo", "violet", "black", "white"] })
   }
 
-  shuffleDeck(arrayOfCards){
+  handleCardClick(event) {
+    console.log(event)
+  }
+
+  shuffleDeck(arrayOfCards) {
     let currentIndex = arrayOfCards.length, temp, randomIndex;
-    while(currentIndex !== 0){
-      randomIndex = Math.floor(Math.random()*currentIndex);
+    while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
       temp = arrayOfCards[currentIndex];
       arrayOfCards[currentIndex] = arrayOfCards[randomIndex];
@@ -30,15 +34,19 @@ class GameBoard extends React.Component {
     if (this.state.cards.length) {
       let deckArray = this.state.cards.concat(this.state.cards)
       deckArray = this.shuffleDeck(deckArray)
-      deckArray = deckArray.map(cardItem)
+      deckArray = deckArray.map((cardClass, index) => cardItem(cardClass, index, this.handleCardClick))
       return (
-        <div className="gameBoard container">
+        <div className="gameBoard">
           {deckArray}
         </div>
       )
     } else {
       return <h1>WAITING TO LOAD</h1>
     }
+  }
+
+  handleCardClick(event){
+    console.log("test event", event)
   }
 
   render() {
@@ -48,9 +56,10 @@ class GameBoard extends React.Component {
 
 export default GameBoard
 
-function cardItem(cardClass, index) {
+function cardItem(cardClass, index, handleCardClick) {
   return (
-    <div className="cardBack" key={index}>
+    <div className="card">
+      <div className="cardBack" key={index} value={`${cardClass}`} onClick={handleCardClick}></div>
       <div className={`${cardClass} hidden cardFront`} />
     </div>
   )

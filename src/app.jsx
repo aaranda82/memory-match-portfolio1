@@ -6,10 +6,11 @@ import GameBoard from './game-board'
 class App extends React.Component {
   render() {
     return (
-      <div className='container'>
+      <div className="flexWrap">
         <Header />
         <Stats />
         <GameBoard />
+        <div className="spacer"/>
       </div>
     )
   }
