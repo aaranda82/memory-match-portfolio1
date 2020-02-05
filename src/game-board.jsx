@@ -58,9 +58,9 @@ export default GameBoard
 
 function cardItem(cardClass, index, handleCardClick) {
   return (
-    <div className="card">
-      <div className="cardBack" key={index} value={`${cardClass}`} onClick={handleCardClick}></div>
-      <div className={`${cardClass} hidden cardFront`} />
+    <div className="card" key={index} value={`${cardClass}`} onClick={()=>handleCardClick}>
+      <div className="cardBack cardSize"></div>
+      <div className={`${cardClass} cardFront cardSize`} />
     </div>
   )
 }
