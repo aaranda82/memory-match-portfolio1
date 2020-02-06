@@ -56,39 +56,39 @@ body{
   display: none;
 }
 
-.red{
+.red-1, .red-2{
   background-color:#e74c3c;
 }
 
-.orange{
+.orange-1, .orange-2{
   background-color: #e67e22;
 }
 
-.yellow{
+.yellow-1, .yellow-2{
   background-color: #f1c40f;
 }
 
-.green{
+.green-1, .green-2{
   background-color: #2ecc71;
 }
 
-.blue{
+.blue-1, .blue-2{
   background-color: #3498db;
 }
 
-.indigo{
+.indigo-1, .indigo-2{
   background-color: #99a8d1;
 }
 
-.violet{
+.violet-1, .violet-2{
   background-color: #9b59b6;
 }
 
-.black{
+.black-1, .black-2{
   background-color: #2c3e50;
 }
 
-.white{
+.white-1, .white-2{
   background-color: #f5f6fa;
 }
 
